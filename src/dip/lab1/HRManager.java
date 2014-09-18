@@ -10,6 +10,6 @@ package dip.lab1;
  */
 public class HRManager {
 public double processPay(Employee e) {
-        return e.getWages();
+        return e.getAnnualWages();
     }
 }

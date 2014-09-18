@@ -26,13 +26,13 @@ public final class BaggageServiceTipCalculator extends ServiceAndBillValues{
 
         switch(serviceQuality) {
             case GOOD:
-                tip = baseTipPerBag * bagCount * (1 + getGOOD_RATE());
+                tip = baseTipPerBag * bagCount * (1 + getGoodRate());
                 break;
             case FAIR:
-                tip = baseTipPerBag * bagCount * (1 + getFAIR_RATE());
+                tip = baseTipPerBag * bagCount * (1 + getFairRate());
                 break;
             case POOR:
-                tip = baseTipPerBag * bagCount * (1 + getPOOR_RATE());
+                tip = baseTipPerBag * bagCount * (1 + getPoorRate());
                 break;
         }
 

@@ -37,7 +37,7 @@ public class HourlyEmployee implements Employee {
     }
 
     @Override
-    public double getWages() {
+    public double getAnnualWages() {
     return hourlyRate * hoursPerWeek;
     
     

@@ -23,13 +23,13 @@ public class FoodServiceTipCalculator extends ServiceAndBillValues {
 
         switch(serviceQuality) {
             case GOOD:
-                tip = bill * getGOOD_RATE();
+                tip = bill * getGoodRate();
                 break;
             case FAIR:
-                tip = bill * getFAIR_RATE();
+                tip = bill * getFairRate();
                 break;
             case POOR:
-                tip = bill * getPOOR_RATE();
+                tip = bill * getPoorRate();
                 break;
         }
 
@@ -37,8 +37,8 @@ public class FoodServiceTipCalculator extends ServiceAndBillValues {
     }
 
     public void setBill(double billAmt) {
-        if(billAmt < getMIN_BILL()) {
-            throw new IllegalArgumentException(getBILL_ENTRY_ERR());
+        if(billAmt < getMinBill()) {
+            throw new IllegalArgumentException(getBillErrorEntry());
         }
         bill = billAmt;
     }

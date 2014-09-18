@@ -10,5 +10,5 @@ package dip.lab1;
  * @author dominicalaus
  */
 public interface Employee {
-    public abstract double getWages();
+    public abstract double getAnnualWages();
 }

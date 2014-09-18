@@ -11,77 +11,77 @@ package dip.lab2;
  * @author mcarpenter5
  */
 public abstract class ServiceAndBillValues implements TipStragey {
-    private double MIN_BILL= 0.00;
-    private double MAX_BILL= 100.00;
-    private String BILL_ENTRY_ERR =
-            "Error: bill must be between " + MIN_BILL + " and "
-            + MAX_BILL;
-    private double GOOD_RATE = 0.20;
-    private  double FAIR_RATE = 0.15;
-    private  double POOR_RATE = 0.10;
+    private double minBill= 0.00;
+    private double maxBill= 100.00;
+    private String billErrorEntry =
+            "Error: bill must be between " + minBill + " and "
+            + maxBill;
+    private double goodRate = 0.20;
+    private  double fairRate = 0.15;
+    private  double poorRate = 0.10;
 
    
     
-    public double getMIN_BILL() {
-        return MIN_BILL;
+    public double getMinBill() {
+        return minBill;
     }
 
-    public void setMIN_BILL(double MIN_BILL) {
-        if ((MIN_BILL < 0) && (MIN_BILL > MAX_BILL))
+    public void setMinBill(double minBill) {
+        if ((minBill < 0) && (minBill > maxBill))
             System.out.println("Your min bill must be greater than 0 and less than your max bill default is:" 
-                    + " " + getMAX_BILL());
-        this.MIN_BILL = MIN_BILL;
+                    + " " + getMaxBill());
+        this.minBill = minBill;
     }
 
-    public String getBILL_ENTRY_ERR() {
-        return BILL_ENTRY_ERR;
+    public String getBillErrorEntry() {
+        return billErrorEntry;
     }
 
-    public void setBILL_ENTRY_ERR(String BILL_ENTRY_ERR) {
-        if(BILL_ENTRY_ERR == null || BILL_ENTRY_ERR.length()< 0)
+    public void setBillErrorEntry(String billErrorEntry) {
+        if(billErrorEntry == null || billErrorEntry.length()< 0)
             System.out.println("Please enter an error message");
-        this.BILL_ENTRY_ERR = BILL_ENTRY_ERR;
+        this.billErrorEntry = billErrorEntry;
     }
-    public double getMAX_BILL() {
-        return MAX_BILL;
+    public double getMaxBill() {
+        return maxBill;
     }
 
-    public void setMAX_BILL(double MAX_BILL) {
-        if (MAX_BILL > MIN_BILL)
+    public void setMaxBill(double maxBill) {
+        if (maxBill > minBill)
             System.out.println("Your Max bill must be greater than your min bill default is:" 
-                    + " " + getMIN_BILL());
-        this.MAX_BILL = MAX_BILL;
+                    + " " + getMinBill());
+        this.maxBill = maxBill;
     }
 
-    public double getGOOD_RATE() {
-        return GOOD_RATE;
+    public double getGoodRate() {
+        return goodRate;
     }
 
-    public void setGOOD_RATE(double GOOD_RATE) {
-        if ((GOOD_RATE < FAIR_RATE))
-            System.out.println("Your good rate should be larger than your fair rate which is:" + " " + getFAIR_RATE());
-        this.GOOD_RATE = GOOD_RATE;
+    public void setGoodRate(double goodRate) {
+        if ((goodRate < fairRate))
+            System.out.println("Your good rate should be larger than your fair rate which is:" + " " + getFairRate());
+        this.goodRate = goodRate;
     }
 
-    public double getFAIR_RATE() {
-        return FAIR_RATE;
+    public double getFairRate() {
+        return fairRate;
     }
 
-    public void setFAIR_RATE(double FAIR_RATE) {
-        if ((FAIR_RATE > GOOD_RATE) && (FAIR_RATE < POOR_RATE))
-            System.out.println("Your Fair rate should be less than your greater rate which is:" + " " + getGOOD_RATE() 
-                    + "and greater than your poor rate which is:" + " " + getPOOR_RATE());
-        this.FAIR_RATE = FAIR_RATE;
+    public void setFairRate(double fairRate) {
+        if ((fairRate > goodRate) && (fairRate < poorRate))
+            System.out.println("Your Fair rate should be less than your greater rate which is:" + " " + getGoodRate() 
+                    + "and greater than your poor rate which is:" + " " + getPoorRate());
+        this.fairRate = fairRate;
     }
 
-    public double getPOOR_RATE() {
-        return POOR_RATE;
+    public double getPoorRate() {
+        return poorRate;
     }
 
-    public void setPOOR_RATE(double POOR_RATE) {
-        if ((POOR_RATE > FAIR_RATE))
-            System.out.println("Your poor rate should be less than your fair rate which is:" + " " + getFAIR_RATE());
-        this.POOR_RATE = POOR_RATE;
+    public void setPoorRate(double poorRate) {
+        if ((poorRate > fairRate))
+            System.out.println("Your poor rate should be less than your fair rate which is:" + " " + getFairRate());
+        this.poorRate = poorRate;
     }
     
 
