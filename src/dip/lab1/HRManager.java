@@ -8,8 +8,8 @@ package dip.lab1;
  *
  * @author your name goes here
  */
-public class HRService {
-public double processAnnualSalary(Employee e) {
-        return e.getAnnualWages();
+public class HRManager {
+public double processPay(Employee e) {
+        return e.getWages();
     }
 }

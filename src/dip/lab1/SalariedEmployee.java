@@ -35,7 +35,7 @@ private double annualRaise;
     }
 
     @Override
-    public double getAnnualWages() {
+    public double getWages() {
     return annualSalary;
     }
 

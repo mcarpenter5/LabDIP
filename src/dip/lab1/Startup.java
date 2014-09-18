@@ -12,15 +12,15 @@ public class Startup {
 
     public static void main(String[] args) {
         Employee emp1 = new HourlyEmployee(15.00,40);
-        Employee emp2 = new SalariedEmployee(45000, 1250);
-        Employee emp3 = new SalariedEmployee(90000,0);
+        Employee emp2 = new SalariedEmployee(50000,2500);
+        Employee emp3 = new SalariedEmployee(90000,1500);
         
         // Create a collection that we can process as a group --
         // demands polymorphic behavior
         Employee[] employees = {emp1, emp2, emp3};
 
         // High-level module
-        HRService hr = new HRService();
+        HRManager hr = new HRManager();
 
         // Just utility code to format numbers nice.
         NumberFormat nf = NumberFormat.getCurrencyInstance();
@@ -29,7 +29,7 @@ public class Startup {
         // doesn't break if we add/subtract employees from array
         for(int i=0; i < employees.length; i++) {
             System.out.println("Employee " + (i+1) + " Annual Salary:" +
-            nf.format(hr.processAnnualSalary(employees[i])));
+            nf.format(hr.processPay(employees[i])));
         }
 //        for (Employee e : employees)
 //            System.out.println("Employee Annual Salary: " + nf.format(hr.processAnnualSalary(e)));
